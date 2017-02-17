@@ -3,10 +3,11 @@ require './app/models/book'
 
 
 class BorrowABook < Sinatra::Base
+set :public_folder, 'public'
 
   get '/' do
     @books = Book.all
-    erb :'books/index'
+    erb :index
   end
 
   # start the server if ruby file executed directly
