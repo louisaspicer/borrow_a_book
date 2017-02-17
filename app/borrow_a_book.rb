@@ -1,8 +1,12 @@
 require 'sinatra/base'
+require './app/models/book'
+
 
 class BorrowABook < Sinatra::Base
+
   get '/' do
-    'Hello BorrowABook!'
+    @books = Book.all
+    erb :'books/index'
   end
 
   # start the server if ruby file executed directly

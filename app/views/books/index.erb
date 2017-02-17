@@ -1,0 +1,9 @@
+<h1> Books You Can Borrow </h1>
+
+<ul id='books'>
+  <% @books.each do |book| %>
+    <li>
+      Title: <%= book.title %>
+    </li>
+  <% end %>
+</ul>
